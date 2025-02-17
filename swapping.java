@@ -1,23 +1,21 @@
 class Main 
 {
-    public static void main( String s [])
-    {
-       int[] arr={1,2,3,4,5,6};
-       int  temp;
-       
-       temp=arr[0];
-       arr[0]=arr[2];
-       arr[2]=temp;
-       
-       temp=arr[3];
-       arr[3]=arr[5];
-       arr[5]=temp;
-       
-       System.out.println("Reversed Array:");
-       for(int i=0;i < arr.length;i++)
-       {
-           System.out.println(arr[i] +" ");
-       }
-
-    }
+	public static void main(String args[]) 
+	{
+		int arr []= {3,2,3,1,2,9};
+		for (int i = 0; i <arr.length ; i++) 
+		{
+			int count=1;
+			for(int j=i+1; j<arr.length; j++) 
+			{
+				if(arr[i]==arr[j])
+				{	count++;
+					arr[j]=-1;
+				}
+			}
+			if(arr[i]!= -1) {
+				System.out.println(arr[i]+" -> "+count);
+			}
+		}
+	}
 }
